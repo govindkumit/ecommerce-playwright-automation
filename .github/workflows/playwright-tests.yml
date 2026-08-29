@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Playwright tests
         run: |
-          pytest
+          pytest --screenshot=only-on-failure --output=screenshots
 
       - name: Upload Playwright HTML Report
         if: always()
