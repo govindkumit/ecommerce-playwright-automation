@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
@@ -37,16 +36,10 @@ jobs:
         run: |
           pytest
 
-      - name: Upload HTML test report
+      - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-test-report
           path: reports/test-report.html
-
-      - name: Upload screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-screenshots
-          path: screenshots/
+          retention-days: 7
