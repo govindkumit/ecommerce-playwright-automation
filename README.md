@@ -56,3 +56,9 @@ ecommerce-playwright-automation/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+## CI/CD
+
+This project is integrated with **GitHub Actions** to automatically execute the Playwright test suite when changes are pushed to the repository.
+
+CI pipeline verified with GitHub Actions.
